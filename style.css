@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: var(--pale-blue) url(images/pattern-background-desktop.svg)
+    no-repeat;
+  background-size: contain;
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-top: 40px;
+}
+
+p {
+  color: var(--desaturated-blue);
+  margin: 20px 50px;
+  line-height: 1.5;
+}
+/************************ Order Container ***********************/
+.order-container {
+  width: 450px;
+  background-color: #fff;
+  text-align: center;
+  margin: 10% auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 15px 50px -20px hsl(225deg 64% 78% / 88%);
+}
+
+.order-container img {
+  text-align: center;
+}
+/************************ Order List ***********************/
+.order {
+  background-color: var(--very-pale-blue);
+  margin: 0 50px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.order small {
+  color: var(--desaturated-blue);
+}
+.order a {
+  color: var(--bright-blue);
+  font-weight: 500;
+}
+
+.order .plan-price h5 {
+  text-align: left;
+  margin: 0 0 5px;
+  font-weight: 700;
+}
+
+.order .plan-price {
+  margin-right: 70px;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/************************ Button ***********************/
+button {
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  font-size: 14px;
+}
+
+.payment {
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-weight: 500;
+
+  border: 0;
+  padding: 15px 100px;
+  border-radius: 10px;
+  margin: 30px auto 25px;
+  box-shadow: 0px 10px 38px -8px hsla(245, 75%, 52%, 0.637);
+}
+
+.payment:hover {
+  opacity: 0.7;
+}
+
+.cancel {
+  border: 0;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.cancel:hover {
+  color: var(--dark-blue);
+}
+
+/************************ Footer ***********************/
+.attribution {
+  text-align: center;
+  font-size: 11px;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 490px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  * {
+    font-size: 14px;
+  }
+
+  /************************ Order Container ***********************/
+  .order-container {
+    width: 90%;
+  }
+
+  .order-container img {
+    width: 100%;
+  }
+
+  /***** Order list ******/
+  .order {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .order .plan-price {
+    margin-left: 10px;
+    margin-right: 25%;
+  }
+
+  /***** Button ******/
+  .payment {
+    width: 85%;
+    padding: 15px 20px;
+  }
+}
